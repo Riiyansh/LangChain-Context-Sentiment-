@@ -59,42 +59,30 @@ nltk (sentiment analysis with VADER)
 
 ---
 
-### 🔍 How the Model Works
-This prototype processes an audio file (MP3/WAV) and extracts insights in three stages:
+## 🔍 How the Model Works  
 
-Upload & Preprocessing
+This prototype processes an **audio file (MP3/WAV)** and extracts insights in three stages:  
 
-Uploads an .mp3 file.
+### 1. Upload & Preprocessing  
+- Uploads an `.mp3` file.  
+- Converts it to `.wav` format if needed.  
+- Resamples to 16kHz for Whisper compatibility.  
 
-Converts it to .wav format if needed.
+### 2. Transcription (Whisper)  
+- Uses **`openai/whisper-small`** model from Hugging Face.  
+- Converts raw speech into text (transcript).  
 
-Resamples to 16kHz for Whisper compatibility.
+### 3. Summarization (BART)  
+- Uses **`facebook/bart-large-cnn`**.  
+- Summarizes the transcript into a concise version.  
 
-Transcription (Whisper)
-
-Uses openai/whisper-small model from Hugging Face.
-
-Converts raw speech into text (transcript).
-
-Summarization (BART)
-
-Uses facebook/bart-large-cnn.
-
-Summarizes the transcript into a concise version.
-
-Sentiment Analysis (VADER)
-
-Applies NLTK’s VADER Sentiment Analyzer.
-
-Produces polarity scores:
-
-pos (positive sentiment)
-
-neu (neutral sentiment)
-
-neg (negative sentiment)
-
-compound (overall sentiment score).
+### 4. Sentiment Analysis (VADER)  
+- Applies **NLTK’s VADER Sentiment Analyzer**.  
+- Produces polarity scores:  
+  - `pos` → positive sentiment  
+  - `neu` → neutral sentiment  
+  - `neg` → negative sentiment  
+  - `compound` → overall sentiment score 
 
 ---
 
