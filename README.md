@@ -40,7 +40,9 @@ Copy code
 jupyter notebook
 Open the .ipynb file and run all cells.
 
-⚙️ Dependencies
+--- 
+
+## ⚙️ Dependencies
 The notebook installs most libraries automatically. Key packages include:
 
 transformers (Whisper, BART summarizer)
@@ -55,7 +57,9 @@ langchain (prompt handling, extensibility)
 
 nltk (sentiment analysis with VADER)
 
-🔍 How the Model Works
+---
+
+### 🔍 How the Model Works
 This prototype processes an audio file (MP3/WAV) and extracts insights in three stages:
 
 Upload & Preprocessing
@@ -92,7 +96,9 @@ neg (negative sentiment)
 
 compound (overall sentiment score).
 
-📊 Example Flow
+---
+
+## 📊 Example Flow
 Upload an MP3 call recording.
 
 Transcription Output
@@ -110,7 +116,10 @@ Sentiment Analysis Output
 bash
 Copy code
 {'neg': 0.0, 'neu': 0.65, 'pos': 0.35, 'compound': 0.70}
-🚀 Future Enhancements
+
+---
+
+## 🚀 Future Enhancements
 Swap the Whisper model with larger versions (medium, large-v2) for better accuracy.
 
 Replace the summarizer with paid LLMs (OpenAI GPT, Gemini, Claude) via LangChain.
