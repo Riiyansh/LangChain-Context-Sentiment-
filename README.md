@@ -98,7 +98,7 @@ compound (overall sentiment score).
 
 ---
 
-## 📊 Example Flow
+### 📊 Example Flow
 Upload an MP3 call recording.
 
 Transcription Output
@@ -119,7 +119,7 @@ Copy code
 
 ---
 
-## 🚀 Future Enhancements
+### 🚀 Future Enhancements
 Swap the Whisper model with larger versions (medium, large-v2) for better accuracy.
 
 Replace the summarizer with paid LLMs (OpenAI GPT, Gemini, Claude) via LangChain.
